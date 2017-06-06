@@ -6,9 +6,8 @@ describe "User can see tags associated with a job" do
     job = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver")
 
     visit company_jobs_path(company, job)
-
-    expect(page).to have_link("Developer")
-    expect(page).to have_link("Aetna")
+    # save_and_open_page
+    expect(page).to have_content("Developer at ESPN")
 
     visit company_job_path
 

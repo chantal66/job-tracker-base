@@ -1,4 +1,4 @@
-Title: <%= @job.title %>
+<h3> Title: <%= link_to @job.title, company_job_path(@company, @job) %> at <%= job.company.name %></h3>
 <br>
 
 Description: <%= @job.description %>
