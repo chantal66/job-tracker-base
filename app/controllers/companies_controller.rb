@@ -51,4 +51,7 @@ class CompaniesController < ApplicationController
   def company_params
     params.require(:company).permit(:name, :city)
   end
+
+#   one refactor is to create set_company method
+#      @company = Company.find(params[:id])
 end
