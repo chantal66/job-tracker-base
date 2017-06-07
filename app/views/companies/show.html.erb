@@ -3,3 +3,10 @@ All Jobs for <strong><%= @company.name %></strong>
 <% @company.jobs.each do |job| %>
   <ul><%= job.title %></ul>
 <% end %>
+
+<ul>
+  <% @company.locations.each do |location| %>
+      <li><%= location.location %></li>
+  <% end %>
+
+</ul>
