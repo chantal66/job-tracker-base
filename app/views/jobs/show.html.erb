@@ -2,9 +2,9 @@ Title: <%= @job.title %>
 Tags:
 <br>
     <ul>
-<%# @job.tags.each do |tag| %>
-      <li>Tags:  <%#= tag.title %></li>
-<%# end %>
+<% @job.tags.each do |tag| %>
+      <li>Tags:  <%= tag.title %> - <%= tag.count %></li>
+<% end %>
     </ul>
 
 Description: <%= @job.description %>
