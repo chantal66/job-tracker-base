@@ -4,4 +4,8 @@ class Company < ActiveRecord::Base
   has_many :jobs
   has_many :officings
   has_many :locations, through: :officings
+
+  def count(company, location)
+    company.locations.where(location: location).count
+  end
 end

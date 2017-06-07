@@ -6,7 +6,6 @@ All Jobs for <strong><%= @company.name %></strong>
 
 <ul>
   <% @company.locations.each do |location| %>
-      <li><%= location.location %></li>
+      <li><%= location.location %> - <%= @company.count(@company, location.location) %></li>
   <% end %>
-
 </ul>
