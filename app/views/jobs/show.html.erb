@@ -1,12 +1,11 @@
-Title: <%= link_to @job.title, company_job_path(@company, @job) %> at <%= @job.company.name %>
-<% binding.pry %>
-Tags: <%= @job.tags.title %>
+Title: <%= @job.title %>
+Tags:
 <br>
-<% @job.tags.each do |tag| %>
     <ul>
-      Tags:  <%= tag.title %>
+<%# @job.tags.each do |tag| %>
+      <li>Tags:  <%#= tag.title %></li>
+<%# end %>
     </ul>
-<% end %>
 
 Description: <%= @job.description %>
 <br>
