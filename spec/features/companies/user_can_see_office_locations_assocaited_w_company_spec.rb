@@ -7,12 +7,11 @@ RSpec.describe "User can see office locations on a specific company" do
 
     visit company_path(company)
 
+    # binding.pry
     expect(page).to have_current_path(company_path(company))
     expect(page).to have_content(company.name)
 
-
     # save_and_open_page
-    # binding.pry
     expect(page).to have_content(location.location)
   end
 end
